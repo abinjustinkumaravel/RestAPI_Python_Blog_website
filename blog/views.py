@@ -23,10 +23,10 @@ def index(request):
     posts=Post.objects.all()
     return render(request,'templates/index.html', {'blog_title': blog_title, 'posts':posts})
 
-def detail(request,post_id):
+def detail(request,slug):
 
     try:
-        post=Post.objects.get(pk=post_id)
+        post=Post.objects.get(slug=slug)
     except Post.DoesNotExist:
         raise Http404("Post dose not Exist")
     # post=next((item for item in posts if item['id']== int(post_id)), None)
