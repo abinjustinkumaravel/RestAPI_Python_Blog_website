@@ -20,7 +20,7 @@
             </div>
             <div class="col-md-8">
               <h5 class="card-title">{{post.title}}</h5>
-              <p class="card-text">{{post.content}}</p>
+              <p class="card-text">{{post.content|truncatechars:30}}</p>
               <div class="d-flex justify-content-between">
                 <a href="{% url 'blog:detail' post_id=post.id %}">Read More</a>
                 <a class="text-decoration-none text-dark fw-bold" href="#"

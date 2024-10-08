@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.urls import reverse
 import logging
 from .models import Post
+from django.http import Http404
 
 
 
@@ -17,10 +18,6 @@ from .models import Post
 # ]
 
 
-
-
-
-
 def index(request):
     blog_title = "Latest Posts"
     posts=Post.objects.all()
@@ -28,7 +25,10 @@ def index(request):
 
 def detail(request,post_id):
 
-    post=Post.objects.get(pk=post_id)
+    try:
+        post=Post.objects.get(pk=post_id)
+    except Post.DoesNotExist:
+        raise Http404("Post dose not Exist")
     # post=next((item for item in posts if item['id']== int(post_id)), None)
     # logger=logging.getLogger("Testing")
     # logger.debug(f"post variable is {post}")
