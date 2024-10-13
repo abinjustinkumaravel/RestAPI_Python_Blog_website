@@ -1,7 +1,5 @@
 # RestAPI Python Blog Website
 
-sss
-
 ## Overview
 
 The **RestAPI Python Blog Website** is a fully functional blog application built with Django. This project demonstrates the use of RESTful API principles to handle blog content, allowing users to create, read, update, and delete blog posts.
