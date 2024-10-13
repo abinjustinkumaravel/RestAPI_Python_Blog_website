@@ -101,8 +101,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For inquiries, please reach out via:
 
 - GitHub: [abinjustinkumaravel](https://github.com/abinjustinkumaravel)
-
-## Acknowledgments
-
-- Django and Django REST Framework for providing a powerful framework for web development.
-- Any contributors, tutorials, or resources that helped in building this project.
